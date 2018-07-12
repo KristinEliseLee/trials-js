@@ -79,7 +79,7 @@ function showTransactions(transactions, balance){
 	for(let [date, amount] of transactions){
 		balance += amount;
 		let transactionType = 'withdrawal';
-		
+
 		if (amount > 0){
 			transactionType = 'deposit';
 		} 
@@ -101,13 +101,31 @@ function showTransactions(transactions, balance){
 // All Customer Info:
 
 // Make an object with customer info
+const customer = {
+	name:accountHolder,
+	accountNumber:accountNumber,
+	businessName:businessName,
+	addresses:addresses,
+	phoneNumbers:phoneNumbers,
+	transactions:transactions,
+	startingBalance:400,
+	numPets:0,
+	favMelon:'Cantaloupe',
+	setFavMelon(melon){
+		this.favMelon = melon
+	},
+	setNumPets(num){
+		this.numPets = num
+	}
+};
 
 
 // Function to add customer attributes
 
 
 // Add attributes for this user
-
+customer.setFavMelon('Casaba')
+customer.setNumPets(2)
 
 // ///////////////////////////////////////////////////////
 // Getting a Business Loan
